@@ -1,6 +1,11 @@
+import org.jetbrains.kotlin.fir.resolve.calls.tower.TowerScopeLevel
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -15,6 +20,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
+        buildConfigField("String","API_KEY", "\"${properties.getProperty("API_KEY")}\"")
     }
 
     buildTypes {
@@ -33,6 +42,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +58,22 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.fragment.ktx)
+
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+
+    //hilt
+    implementation (libs.hilt.android)
+    kapt (libs.hilt.compiler)
+
+    // coroutines
+    implementation(libs.kotlinx.coroutines.android)
+
+    implementation (libs.glide)
+
+}
+
+kapt {
+    correctErrorTypes = true
 }
