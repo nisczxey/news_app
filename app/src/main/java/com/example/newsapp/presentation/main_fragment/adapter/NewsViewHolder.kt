@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.fragments.main.adapter
+package com.example.newsapp.presentation.main_fragment.adapter
 
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
