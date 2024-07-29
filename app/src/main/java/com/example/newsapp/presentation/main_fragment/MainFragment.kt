@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.fragments.main
+package com.example.newsapp.presentation.main_fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsapp.R
 import com.example.newsapp.databinding.FragmentMainBinding
-import com.example.newsapp.presentation.fragments.main.adapter.NewsAdapter
-import com.example.newsapp.presentation.fragments.main.adapter.decoration.NewsItemDecoration
+import com.example.newsapp.presentation.main_fragment.adapter.NewsAdapter
+import com.example.newsapp.presentation.main_fragment.adapter.decoration.NewsItemDecoration
 import com.example.newsapp.presentation.ui_model.NewsUiModel
 import com.example.newsapp.presentation.util.gone
 import com.example.newsapp.presentation.util.showToast

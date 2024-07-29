@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.fragments.main.adapter.decoration
+package com.example.newsapp.presentation.main_fragment.adapter.decoration
 
 import android.graphics.Rect
 import android.view.View

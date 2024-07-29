@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.fragments.main
+package com.example.newsapp.presentation.main_fragment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

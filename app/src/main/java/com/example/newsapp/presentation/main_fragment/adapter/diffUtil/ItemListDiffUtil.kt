@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.fragments.main.adapter.diffUtil
+package com.example.newsapp.presentation.main_fragment.adapter.diffUtil
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.newsapp.presentation.ui_model.NewsUiModel
